@@ -1,0 +1,86 @@
+body {
+	background: #CCC;
+}
+.big_pic {
+	height: 320px;
+	width: 400px;
+	/*设置可见窗口的大小*/
+	overflow: hidden;
+	/*".main"居中*/
+	margin: 50px auto 0;
+	position: relative;
+}
+.big_pic .mark_left {
+	width: 200px;
+	height: 320px;
+	background: red;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 4999;
+}
+.big_pic .mark_right {
+	width: 200px;
+	height: 320px;
+	background: green;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	z-index: 4999;
+}
+.big_pic .prev {
+	width: 60px;
+	height: 60px;
+	background: url("res/btn.gif");
+	position: absolute;
+	top: 130px;
+	left: 10px;
+	cursor: pointer;
+	opacity:0; 
+	z-index: 5000;
+}
+.big_pic .next {
+	width: 60px;
+	height: 60px;
+	background: url("res/btn.gif") 0 -60px;
+	position: absolute;
+	top: 130px;
+	right: 10px;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 5000;
+}
+.big_pic li {
+	height: 320px;
+	width: 400px;
+	/*使多张图片叠加在一起*/
+	position: absolute;
+}
+.small_pic {
+	width: 400px;
+	height: 80px;
+	position: relative;
+	overflow: hidden;
+	margin:5px auto 0;
+}
+.small_pic ul { 
+	height: 80px; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+}
+.small_pic li { 
+	width: 100px; 
+	height: 80px; 
+	float: left; 
+	background: url(res/loading.gif) no-repeat center center; 
+	/*使鼠标停在该位置的时候显示为一个手指的形状*/
+	cursor: pointer;
+	opacity: 0.5; 
+}
+.small_pic li img {
+	width: 100px; 
+	height: 80px; 
+}
